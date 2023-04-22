@@ -104,3 +104,16 @@ mathjax:
   import: global # global or demand
   ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
   ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
+
+# comments functions
+# to disable comment sections for certain posts
+# add `comments: false` to the header
+giscus:
+  enable: true
+  # the following values can be generated in https://giscus.app/
+  repo: lovoski/lovoski.github.io
+  repo_id: R_kgDOJYt12g
+  category: Announcements
+  category_id: DIC_kwDOJYt12s4CV6Yh
+  theme: light
+  language: zh-CN

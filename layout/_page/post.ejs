@@ -35,19 +35,20 @@
             <%- page.content %>
         </div>
 
-        <% if (page.comments) { %>
+        <!-- 读入保存在_config.yml里面的变量 -->
+        <% if (page.comments && theme.giscus.enable) { %>
             <script src="https://giscus.app/client.js"
-                    data-repo=lovoski/lovoski.github.io
-                    data-repo-id="R_kgDOJYt12g"
-                    data-category="Announcements"
-                    data-category-id="DIC_kwDOJYt12s4CV6Yh"
+                    data-repo="<%= theme.giscus.repo %>"
+                    data-repo-id="<%= theme.giscus.repo_id %>"
+                    data-category="<%= theme.giscus.category %>"
+                    data-category-id="<%= theme.giscus.category_id %>"
                     data-mapping="pathname"
                     data-strict="0"
                     data-reactions-enabled="1"
                     data-emit-metadata="0"
                     data-input-position="top"
-                    data-theme="light"
-                    data-lang="zh-CN"
+                    data-theme="<%= theme.giscus.theme %>"
+                    data-lang="<%= theme.giscus.language %>"
                     crossorigin="anonymous"
                     async>
             </script>
